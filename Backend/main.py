@@ -65,12 +65,12 @@ def create_sos(
         status="Reported"
     )
 
-    # Save to database
+    # Save SOS to MySQL
     db.add(new_sos)
     db.commit()
     db.refresh(new_sos)
 
-    # Send response to frontend
+    # Response to frontend
     return {
         "success": True,
         "message": "SOS submitted successfully",
